@@ -23,11 +23,11 @@ const Card: React.FC<Props> = ({
                 alt={alt}
                 className="object-scale-down h-48 w-96"
             />
-            <h1 className="text-3xl font-bold my-3">{title}</h1>
-            <h3 className="italic font-bold mt-3 mb-1.5 text-pink-900">
+            <h1 className="text-3xl font-bold my-3 tracking-wider">{title}</h1>
+            <h3 className="italic font-bold mt-3 mb-1.5 text-pink-900 tracking-wider">
                 {tagline}
             </h3>
-            <p className="text-lg">
+            <p className="text-lg tracking-wide">
                 {description.length > 250
                     ? description.slice(0, 250) + "..."
                     : description}

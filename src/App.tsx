@@ -8,9 +8,10 @@ function App() {
             <h1 className="flex justify-center text-3xl font-bold underline">
                 Hello world!
             </h1>
-            <Card>
-                <h1>Hello</h1>
-            </Card>
+            <Card
+                title="Beer Name"
+                description="An example description of this beer"
+            ></Card>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Beers} from "../../model/Beers";
 import Card from "../Card/Card";
+import Tag from "../Tag/Tag";
 
 const CardList = () => {
     const [beers, setBeers] = useState<Beers[]>([]);
@@ -30,7 +31,9 @@ const CardList = () => {
                         title={beer.name}
                         description={beer.description}
                         tagline={beer.tagline}
-                    ></Card>
+                    >
+                        <Tag>{`${beer.abv}%`}</Tag>
+                    </Card>
                 );
             })}
         </div>

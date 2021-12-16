@@ -3,4 +3,6 @@ export interface Beers {
     name: string;
     description: string;
     tagline?: string;
+    abv?: number;
+    foodPairing?: [string];
 }

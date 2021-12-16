@@ -6,7 +6,7 @@ export interface Props {
     tagline?: string;
 }
 
-const Card: React.FC<Props> = ({title, description, tagline}) => {
+const Card: React.FC<Props> = ({title, description, tagline, children}) => {
     return (
         <div className="w-full border border-blue shadow-lg bg-white rounded-lg h-full p-5">
             <h1 className="text-3xl font-bold mb-2">{title}</h1>
@@ -16,6 +16,7 @@ const Card: React.FC<Props> = ({title, description, tagline}) => {
                     ? description.slice(0, 250) + "..."
                     : description}
             </p>
+            {children}
         </div>
     );
 };

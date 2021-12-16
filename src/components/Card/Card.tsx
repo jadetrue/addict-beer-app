@@ -4,13 +4,29 @@ export interface Props {
     title: string;
     description: string;
     tagline?: string;
+    imageUrl?: string;
+    alt?: string;
 }
 
-const Card: React.FC<Props> = ({title, description, tagline, children}) => {
+const Card: React.FC<Props> = ({
+    title,
+    description,
+    tagline,
+    imageUrl,
+    alt,
+    children,
+}) => {
     return (
         <div className="w-full border border-blue shadow-lg bg-white rounded-lg h-full p-5">
-            <h1 className="text-3xl font-bold mb-2">{title}</h1>
-            <h3 className="italic font-bold mb-3 text-pink-900">{tagline}</h3>
+            <img
+                src={imageUrl}
+                alt={alt}
+                className="object-scale-down h-48 w-96"
+            />
+            <h1 className="text-3xl font-bold my-3">{title}</h1>
+            <h3 className="italic font-bold mt-3 mb-1.5 text-pink-900">
+                {tagline}
+            </h3>
             <p className="text-lg">
                 {description.length > 250
                     ? description.slice(0, 250) + "..."

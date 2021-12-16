@@ -28,6 +28,8 @@ const CardList = () => {
                 return (
                     <Card
                         key={beer.id}
+                        imageUrl={beer.image_url}
+                        alt={beer.name}
                         title={beer.name}
                         description={beer.description}
                         tagline={beer.tagline}

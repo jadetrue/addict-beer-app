@@ -1,17 +1,11 @@
 import React from "react";
-import Card from "./components/Card/Card";
 import "./styles/typography.css";
+import CardList from "./components/CardList/CardList";
 
 function App() {
     return (
         <div>
-            <h1 className="flex justify-center text-3xl font-bold underline">
-                Hello world!
-            </h1>
-            <Card
-                title="Beer Name"
-                description="An example description of this beer"
-            ></Card>
+            <CardList />
         </div>
     );
 }

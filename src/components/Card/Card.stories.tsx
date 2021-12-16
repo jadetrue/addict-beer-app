@@ -1,6 +1,6 @@
 import React from "react";
 import {Story, Meta} from "@storybook/react/types-6-0";
-import Card from "./Card.tsx";
+import Card from "./Card";
 
 export default {
     title: "Components/Card",

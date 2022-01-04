@@ -1,18 +1,17 @@
 import React, {useEffect, useState} from "react";
 import {getBeers} from "../../services/beer.service";
-import CardList from "../CardList/CardList";
 
-const SearchList: React.FC = () => {
+interface Props {
+    updateSearch: (e: string) => void;
+}
+
+const SearchList: React.FC<Props> = (props) => {
     const [search, setSearch] = useState<string>("");
-    const [isDisplaying, setIsDisplaying] = useState(Boolean);
 
-    useEffect(() => {
-        const updateBeers = async (search: any) => {
-            const response = await getBeers(search);
-            console.log(response);
-        };
-        updateBeers(search);
-    }, [search]);
+    // useEffect(() => {
+    //     const value = search.toLowerCase();
+    //     console.log(getBeers(value));
+    // }, [search]);
 
     return (
         <>
@@ -21,10 +20,9 @@ const SearchList: React.FC = () => {
                     type="text"
                     className="rounded-lg p-2 w-1/3 text-center"
                     placeholder="Find a beer"
-                    onChange={(e) => setSearch(e.target.value)}
+                    onChange={(e) => props.updateSearch(e.target.value)}
                 />
             </div>
-            {isDisplaying && <CardList />}
         </>
     );
 };

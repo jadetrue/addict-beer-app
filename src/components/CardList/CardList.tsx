@@ -3,7 +3,7 @@ import {Beers} from "../../model/Beers";
 import Card from "../Card/Card";
 import Tag from "../Tag/Tag";
 
-const CardList = () => {
+const CardList: React.FC = () => {
     const [beers, setBeers] = useState<Beers[]>([]);
 
     const API_URL = "https://api.punkapi.com/v2/beers";

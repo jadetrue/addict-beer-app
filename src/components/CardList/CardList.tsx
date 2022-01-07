@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {Beers} from "../../model/Beers";
-import {fetchBeerData} from "../../services/beer.service";
 import Card from "../Card/Card";
 import Tag from "../Tag/Tag";
 
@@ -9,10 +8,10 @@ interface Props {
     beers: Beers[];
 }
 
-const CardList: React.FC<Props> = ({beers}) => {
+export const CardList: React.FC<Props> = ({beers}) => {
     return (
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-5 h-3/6">
-            {beers.map((beer: any) => {
+            {beers.map((beer: Beers) => {
                 return (
                     <Card
                         key={beer.id}

@@ -1,11 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import "./styles/typography.css";
 import "./styles/global.css";
+
 import CardList from "./components/CardList/CardList";
 import SearchBar from "./components/SearchBar/SearchBar";
+import FeedbackPanel from "./components/FeedbackPanel/FeedbackPanel";
+
 import {getBeers} from "./services/beer.service";
 import {Beers} from "./model/Beers";
-import FeedbackPanel from "./components/FeedbackPanel/FeedbackPanel";
 
 function App() {
     const [searchText, setSearchText] = useState("");

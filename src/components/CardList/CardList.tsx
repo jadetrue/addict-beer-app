@@ -1,30 +1,17 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {Beers} from "../../model/Beers";
 import Card from "../Card/Card";
 import Tag from "../Tag/Tag";
 
-const CardList = () => {
-    const [beers, setBeers] = useState<Beers[]>([]);
+interface Props {
+    searchText: string;
+    beers: Beers[];
+}
 
-    const API_URL = "https://api.punkapi.com/v2/beers";
-
-    useEffect(() => {
-        const fetchBeers = () => {
-            fetch(API_URL)
-                .then((res) => res.json())
-                .then((jsonResponse) => {
-                    setBeers(jsonResponse);
-                })
-                .catch((error) => {
-                    console.error(error);
-                });
-        };
-        return fetchBeers();
-    }, []);
-
+export const CardList: React.FC<Props> = ({beers}) => {
     return (
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-5">
-            {beers.map((beer) => {
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-5 h-3/6">
+            {beers.map((beer: Beers) => {
                 return (
                     <Card
                         key={beer.id}

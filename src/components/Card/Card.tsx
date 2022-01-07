@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface Props {
-    title: string;
+    title: string; // title: [{name: string}];
     description: string;
     tagline?: string;
     imageUrl?: string;
@@ -18,11 +18,13 @@ const Card: React.FC<Props> = ({
 }) => {
     return (
         <div className="w-full border border-blue shadow-lg bg-white rounded-lg h-full p-5">
-            <img
-                src={imageUrl}
-                alt={alt}
-                className="object-scale-down h-48 w-96"
-            />
+            {imageUrl && (
+                <img
+                    src={imageUrl}
+                    alt={alt}
+                    className="object-scale-down h-48 w-96"
+                />
+            )}
             <h1 className="text-3xl font-bold my-3 tracking-wider">{title}</h1>
             <h3 className="italic font-bold mt-3 mb-1.5 text-pink-900 tracking-wider">
                 {tagline}

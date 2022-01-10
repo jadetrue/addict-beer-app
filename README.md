@@ -18,6 +18,8 @@ I've learnt a few things in this particular project:
 - More aware of folder structure and how Props are passed down through components
 - Fetching particular information from an api (I used https://punkapi.com/documentation/v2 for this project) and passing this through the App
 
+I would like to improve certain areas, including cleaning up the search functionality to filter better results and results based on the information actually being displayed.
+
 ## ✍🏻 Author
 
 - GitHub - [@jadetruexo](https://github.com/jadetruexo/)

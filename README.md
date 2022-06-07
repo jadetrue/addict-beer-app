@@ -22,4 +22,4 @@ I would like to improve certain areas, including cleaning up the search function
 
 ## ✍🏻 Author
 
-- GitHub - [@jadetruexo](https://github.com/jadetruexo/)
+- GitHub - [@jadetrue](https://github.com/jadetrue/)
